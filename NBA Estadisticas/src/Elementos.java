@@ -26,7 +26,7 @@ public class Elementos extends JFrame {
 	private JTextField MediaGlobalEquipos2;
 	
 	//Variables
-	private String Equipos []={"Golden State","Dallas","Toronto","Phoenix","LA Clippers","Portland","Atlanta","Boston","Denver","San Antonio","Sacramento","Chicago","Houston","Memphis","LA Lakers","New Orleans","Cleveland","Washington","Oklahoma City","Milwaukee","Minesota","Detroit","Charlotte","Utah","Brooklyn","Indiana","Orlando","Miami","New York","Philadelphia",};
+	private String equipos []={"Golden State","Dallas","Toronto","Phoenix","LA Clippers","Portland","Atlanta","Boston","Denver","San Antonio","Sacramento","Chicago","Houston","Memphis","LA Lakers","New Orleans","Cleveland","Washington","Oklahoma City","Milwaukee","Minesota","Detroit","Charlotte","Utah","Brooklyn","Indiana","Orlando","Miami","New York","Philadelphia"};
 	private String MeidaOfensivos []={"109.2","108.8","107.8","107","106.4","103.8","102.9","102.6","102.3","102.3","102.2","102.1","101.8","101.8","101.4","101.3","99.8","99.6","98.8","98.5","98.2","97.7","96","96","95.6","95.3","94.2","94","92.9","90.6",};
 	private String MediaDefensivos []={};
 	
@@ -144,7 +144,7 @@ public class Elementos extends JFrame {
 			MediaGlobalEquipos2.setColumns(10);
 		
 		
-		//JComboBoxs que nos permitiran seleccionar los equipos.
+			//JComboBoxs que nos permitiran seleccionar los equipos.
 			JComboBox BoxEquipoA = new JComboBox();
 			BoxEquipoA.addItemListener(new ItemListener() {
 				public void itemStateChanged(ItemEvent arg0) {
@@ -161,5 +161,12 @@ public class Elementos extends JFrame {
 			});
 			BoxEquipoB.setBounds(297, 54, 120, 20);
 			contentPane.add(BoxEquipoB);
+			
+			//Rellenado de los ComboBox
+			for(int i=0;i<equipos.length;i++)
+			{
+				BoxEquipoA.addItem(equipos[i]);
+				BoxEquipoB.addItem(equipos[i]);
+			}
 	}
 }
