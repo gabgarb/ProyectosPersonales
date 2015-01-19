@@ -27,7 +27,7 @@ public class Elementos extends JFrame {
 	
 	//Variables
 	private String equipos []={"Golden State","Dallas","Toronto","Phoenix","LA Clippers","Portland","Atlanta","Boston","Denver","San Antonio","Sacramento","Chicago","Houston","Memphis","LA Lakers","New Orleans","Cleveland","Washington","Oklahoma City","Milwaukee","Minesota","Detroit","Charlotte","Utah","Brooklyn","Indiana","Orlando","Miami","New York","Philadelphia"};
-	private String MeidaOfensivos []={"109.2","108.8","107.8","107","106.4","103.8","102.9","102.6","102.3","102.3","102.2","102.1","101.8","101.8","101.4","101.3","99.8","99.6","98.8","98.5","98.2","97.7","96","96","95.6","95.3","94.2","94","92.9","90.6",};
+	private float MediaOfensivos []={109.2f,108.8f,107.8f,107f,106.4f,103.8f,102.9f,102.6f,102.3f,102.3f,102.2f,102.1f,101.8f,101.8f,101.4f,101.3f,99.8f,99.6f,98.8f,98.5f,98.2f,97.7f,96f,96f,95.6f,95.3f,94.2f,94f,92.9f,90.6f};
 	private String MediaDefensivos []={};
 	
 	
@@ -148,6 +148,9 @@ public class Elementos extends JFrame {
 			JComboBox BoxEquipoA = new JComboBox();
 			BoxEquipoA.addItemListener(new ItemListener() {
 				public void itemStateChanged(ItemEvent arg0) {
+					System.out.println(BoxEquipoA.getSelectedItem());
+					int posicion=BoxEquipoA.getSelectedIndex();
+					System.out.println(MediaOfensivos[posicion]);
 				}
 			});
 			BoxEquipoA.setBounds(10, 54, 120, 20);
